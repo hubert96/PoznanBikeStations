@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
 import {HttpService} from "./http.service";
 import {HttpClientModule} from "@angular/common/http";
+import {} from '@types/googlemaps';
 
 @NgModule({
   declarations: [
