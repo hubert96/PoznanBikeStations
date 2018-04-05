@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col-12">
+    <main *ngIf="bikeStationsJsonek !== undefined">
+      <div style="height: 100%;" *ngFor="let station of bikeStationsJsonek.features">
+        <div routerLink="map" routerLinkActive="active" (click)="expandStation(station)" [id]="station.id" class="station">
+          <div class="padding">
+            <header>
+              <h2 class="name">{{station.id}} {{station.properties.label}}</h2>
+              <small class="street"><span class="distance">{{calcOdleglosc(station) | number:"1.0-0"}}m</span>{{station.properties.label}}</small>
+            </header>
+            <div class="row available">
+              <div class="col-6">
+                <img class="img" src="../../assets/img/ShapeNormal.png">
+                <p class="text">Available bikes</p>
+                <p class="number green">{{station.properties.bikes}}</p>
+              </div>
+              <div class="col-6">
+                <img class="img" src="../../assets/img/icons8-unlock_2Normal.png">
+                <p class="text">Available places</p>
+                <p class="number gray">{{station.properties.free_racks}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
