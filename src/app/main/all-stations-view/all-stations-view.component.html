@@ -6,7 +6,7 @@
           <div class="padding">
             <header>
               <h2 class="name">{{station.id}} {{station.properties.label}}</h2>
-              <small class="street"><span class="distance">{{calcOdleglosc(station) | number:"1.0-0"}}m</span>{{station.properties.label}}</small>
+              <small class="street"><span class="distance">{{ station.distance | number:"1.0-0"}}m</span>{{station.properties.label}}</small>
             </header>
             <div class="row available">
               <div class="col-6">

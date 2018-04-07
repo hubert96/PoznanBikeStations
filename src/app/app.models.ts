@@ -6,6 +6,7 @@ export interface BikeStationsJson {
     },
     id,
     type,
+    distance: 0,
     properties: {
       free_racks,
       bikes,
